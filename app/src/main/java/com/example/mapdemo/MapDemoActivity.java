@@ -281,6 +281,16 @@ public class MapDemoActivity extends AppCompatActivity implements GoogleMap.OnMa
         });
 
 
+        //Configure dialog Button Cancel
+        alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+
+        //Display the dialog
+        alertDialog.show();
+
     }
 
     // Define a DialogFragment that displays the error dialog
