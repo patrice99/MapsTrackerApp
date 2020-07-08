@@ -291,6 +291,9 @@ public class MapDemoActivity extends AppCompatActivity implements GoogleMap.OnMa
                         .snippet(snippet)
                         .icon(defaultMarker));
 
+                //Animate marker using the drop effect
+                dropPinEffect(marker);
+
             }
         });
 
