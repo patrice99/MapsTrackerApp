@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout android:id="@+id/layout_root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
 
-</LinearLayout>
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/etSnippet"
+        android:hint="@string/title"
+        android:inputType="textShortMessage"
+        android:paddingTop="20dp"
+        android:autofillHints=""></EditText>
+
+    <EditText
+        android:id="@+id/etSnippet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etTitle"
+        android:autofillHints=""
+        android:hint="@string/snippet"
+        android:inputType="textLongMessage"></EditText>
+</RelativeLayout>
