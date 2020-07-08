@@ -30,7 +30,7 @@ public class CustomWindowAdapter implements GoogleMap.InfoWindowAdapter {
         description.setText(marker.getSnippet());
 
         //Return info window contents
-        return view;
+        return view;I
     }
 
     //This changes the frame of the info window, returning null uses the default frame
