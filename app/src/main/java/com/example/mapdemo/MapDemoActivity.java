@@ -22,6 +22,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.DialogFragment;
 
+import com.example.mapdemo.adapters.CustomWindowAdapter;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -184,7 +185,7 @@ public class MapDemoActivity extends AppCompatActivity implements GoogleMap.OnMa
     }
 
     @Override
-    protected void onResume() {
+    public void onResume() {
         super.onResume();
 
         // Display the connection status
@@ -201,7 +202,7 @@ public class MapDemoActivity extends AppCompatActivity implements GoogleMap.OnMa
     }
 
     @NeedsPermission({Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION})
-    protected void startLocationUpdates() {
+    public void startLocationUpdates() {
         mLocationRequest = new LocationRequest();
         mLocationRequest.setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
         mLocationRequest.setInterval(UPDATE_INTERVAL);
@@ -261,7 +262,7 @@ public class MapDemoActivity extends AppCompatActivity implements GoogleMap.OnMa
     }
 
     //Displays the alert that adds the marker
-    private void showAlertDialogForPoint(final LatLng point) {
+    public void showAlertDialogForPoint(final LatLng point) {
         //inflate message_item.xml view
         View messageView = LayoutInflater.from(MapDemoActivity.this).inflate(R.layout.message_item, null);
 
