@@ -1,12 +1,15 @@
 package com.example.mapdemo;
 
 import android.Manifest;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.location.Location;
 import android.os.Bundle;
 import android.os.Looper;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -230,8 +233,27 @@ public class MapDemoActivity extends AppCompatActivity implements GoogleMap.OnMa
     }
 
     @Override
-    public void onMapLongClick(LatLng latLng) {
+    public void onMapLongClick(LatLng point) {
         Toast.makeText(this, "Long Press" , Toast.LENGTH_SHORT).show();
+        //Display the alert dialogue.
+        showAlertDialogForPoint(point);
+    }
+
+    //Displays the alert that adds the marker
+    private void showAlertDialogForPoint(LatLng point) {
+        //inflate message_item.xml view
+        View messageView = LayoutInflater.from(MapDemoActivity.this).inflate(R.layout.message_item, null);
+
+        //Create alert dialog builder
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+
+        //Set message_item xml to AlertDialogue builder
+        alertDialogBuilder.setView(messageView);
+
+        //Create alert dialog
+        final AlertDialog alertDialog = alertDialogBuilder.create();
+
+
     }
 
     // Define a DialogFragment that displays the error dialog
