@@ -281,6 +281,7 @@ public class MapDemoActivity extends AppCompatActivity implements GoogleMap.OnMa
             public void onClick(DialogInterface dialog, int which) {
                 //Define color of marker icon
                 BitmapDescriptor defaultMarker = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN);
+                BitmapDescriptor customMarker = BitmapDescriptorFactory.fromResource(R.drawable.ic_baseline_house_24);
 
                 //Extract content from alert dialogue
                 String title = ((EditText) alertDialog.findViewById(R.id.etTitle)).getText().toString();
