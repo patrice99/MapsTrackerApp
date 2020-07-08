@@ -342,7 +342,7 @@ public class MapDemoActivity extends AppCompatActivity implements GoogleMap.OnMa
         final long duration = 1500;
 
         //Use the bounce interpolator
-        final.final android.view.animation.Interpolator interpolator = new BounceInterpolator();
+        final android.view.animation.Interpolator interpolator = new BounceInterpolator();
 
         //Animate the marker with a bounce updating its position every 15 ms
         handler.post(new Runnable() {
